@@ -39,11 +39,12 @@ with gr.Blocks(title="JobPrep Companion") as demo:
     gr.Markdown(DESCRIPTION)
     gr.ChatInterface(
         fn=chat,
-        type="messages",
-        chatbot=gr.Chatbot(height=500, type="messages"),
+        chatbot=gr.Chatbot(height=500),
         textbox=gr.Textbox(
             placeholder="Type help or select a mode, for example: mode: interview",
-            lines=4,
+            lines=1,
+            max_lines=4,
+            submit_btn="Send",
         ),
         examples=[
             "help",
