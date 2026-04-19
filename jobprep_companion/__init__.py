@@ -1,0 +1,1 @@
+"""JobPrep Companion package."""
